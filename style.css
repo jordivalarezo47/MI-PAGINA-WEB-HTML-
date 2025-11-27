@@ -37,43 +37,63 @@ body {
 /* ---------- FOOTER ---------- */
 .footer {
     width: 100%;
-    background: linear-gradient(to right, #000000, #1a1a1a, #000000);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    /* Fondo degradado oscuro + transparencia */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(30, 30, 30, 0.65));
+    backdrop-filter: blur(12px); /* 🔥 efecto vidrio */
+    -webkit-backdrop-filter: blur(12px); /* para Safari */
+
     color: #fff;
-    padding: 25px 40px;
+    padding: 20px 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
-    border-top: 1px solid #222;
+
+    /* Borde luminoso elegante */
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    z-index: 100;
 }
+
 
 .footer-info h3 {
     margin: 0;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 500;
 }
 
 .footer-info p {
-    margin: 5px 0;
+    margin: 2px 0;
     color: #ccc;
 }
 
 .footer-redes {
     display: flex;
-    gap: 12px;
+    gap: 8px;
 }
 
 .icon {
-    padding: 8px 16px;
+    padding: 10px 18px;
+    border-radius: 8px;
     text-decoration: none;
-    background: #111;
+
     color: white;
-    border-radius: 6px;
-    border: 1px solid #444;
-    font-size: 14px;
-    transition: 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.05); /* transparente */
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
 }
+
+.icon:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
 
 .icon:hover {
     background: #444;
@@ -103,6 +123,7 @@ body {
 /* Contenido principal ocupa el espacio */
 main {
     flex: 1;
+    padding-bottom: 140px;
 }
 
 /* FOOTER */
@@ -110,7 +131,7 @@ main {
     width: 100%;
     background: #000;
     color: #fff;
-    padding: 25px 40px;
+    padding: 10px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
