@@ -1,58 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
-
+    
 <head>
     <meta charset="UTF-8">
-    <title>Mi Primera Web (html)</title>
-    <header class="barra">
-        <h1 class="titulo">Yummy 🏍️</h1>
-        <p class="descripcion">Desarrollador web en progreso • Amante de las motos</p>
-    </header>
-
-
-    <style>
-        .barra {
-            width: 100%;
-            background: #000000;
-            color: white;
-            padding: 20px 30px;
-            box-sizing: border-box;
-            /* IMPORTANTE */
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
-        }
-
-
-        .titulo {
-            margin: 0;
-            font-size: 60px;
-            /* nombre bien grande */
-            font-weight: 900;
-        }
-
-        .descripcion {
-            margin: 8px 0 0 0;
-            font-size: 16px;
-            color: #cccccc;
-        }
-
-        body {
-            background-image: url("img/fondo.jpg");
-            /* tu imagen de fondo */
-            background-size: cover;
-            /* que cubra toda la pantalla */
-            background-repeat: no-repeat;
-            /* que no se repita */
-            background-attachment: fixed;
-            /* que quede fija al hacer scroll */
-            background-position: center;
-            /* centrada */
-            color: rgb(255, 255, 255);
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    proyecto parcial 1 </body>
 
+    <!-- HEADER -->
+    <header class="barra">
+        <h1 class="titulo">MI PRIMERA PÁGINA WEB CON HTML</h1>
+        <p class="descripcion">Desarrollador web en progreso</p>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <h2 style="text-align:center; margin-top:40px;">Proyecto parcial 1</h2>
+    </main>
+
+    <!-- FOOTER CON DEGRADADO OSCURO -->
+    <footer class="footer">
+        <div class="footer-info">
+            <h3>Yummy 🏍️</h3>
+            <p>Desarrollador Web en Progreso</p>
+            <p class="correo">📧 jordi@example.com</p>
+        </div>
+
+        <div class="footer-redes">
+            <a href="https://github.com/TU-USUARIO" target="_blank" class="icon github">GitHub</a>
+            <a href="https://instagram.com/TU-USUARIO" target="_blank" class="icon insta">Instagram</a>
+            <a href="https://tiktok.com/@TU-USUARIO" target="_blank" class="icon tiktok">TikTok</a>
+        </div>
+    </footer>
+
+</body>
 </html>

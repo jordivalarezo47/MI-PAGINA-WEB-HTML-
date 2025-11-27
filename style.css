@@ -1,0 +1,119 @@
+.barra {
+    width: 100%;
+    background: #5c5555;
+    color: white;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    /* IMPORTANTE */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.titulo {
+    margin: 0;
+    font-size: px;
+    font-weight: 900;
+}
+
+.descripcion {
+    margin: 8px 0 0 0;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+body {
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* que no se repita */
+    background-attachment: fixed;
+    /* que quede fija al hacer scroll */
+    background-position: center;
+    /* centrada */
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, #000000, #1a1a1a, #000000);
+    color: #fff;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-top: 1px solid #222;
+}
+
+.footer-info h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 12px;
+}
+
+.icon {
+    padding: 8px 16px;
+    text-decoration: none;
+    background: #111;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid #444;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.icon:hover {
+    background: #444;
+}
+
+/* Colores personalizados por red */
+.github { background: #24292e; }
+.github:hover { background: #3b4046; }
+
+.insta { background: #c13584; }
+.insta:hover { background: #e1306c; }
+
+.tiktok { background: #010101; border-color: #fe2c55; }
+.tiktok:hover { background: #fe2c55; }
+
+/* Hace que el contenido ocupe toda la pantalla */
+html, body {
+    height: 100%;
+}
+
+/* Hace que el body empuje el footer hacia abajo */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenido principal ocupa el espacio */
+main {
+    flex: 1;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-top: 1px solid #333;
+}
