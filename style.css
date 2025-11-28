@@ -1,17 +1,49 @@
-.barra {
+/* ========== HEADER ========== */
+.header {
     width: 100%;
-    background: #5c5555;
+    background: rgba(0, 0, 0, 0.85);
+    /* Fondo negro con transparencia */
     color: white;
-    padding: 20px 30px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
-    /* IMPORTANTE */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
 }
 
-.titulo {
-    margin: 0;
-    font-size: px;
-    font-weight: 900;
+.header-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-info {
+    text-align: left;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.role {
+    font-size: 15px;
+    font-weight: 300;
+    color: #ecf0f1;
+}
+
+.header-profile .profile-img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 .descripcion {
@@ -20,32 +52,46 @@
     color: #cccccc;
 }
 
+/* ========== BODY & FONDO ========== */
 body {
-    background-image: url("img/fondo.jpg");
+    background: url("img/fondo.jpg") no-repeat center center fixed;
     background-size: cover;
-    /* que cubra toda la pantalla */
-    background-repeat: no-repeat;
-    /* que no se repita */
-    background-attachment: fixed;
-    /* que quede fija al hacer scroll */
-    background-position: center;
-    /* centrada */
+    
     color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
-/* ---------- FOOTER ---------- */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo oscuro con opacidad */
+    z-index: -1;
+}
+
+/* Hace que el contenido ocupe toda la pantalla y empuje el footer hacia abajo */
+main {
+    flex: 1;
+    padding-bottom: 140px;
+}
+
+/* ========== FOOTER ========== */
 .footer {
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
-
-    /* Fondo degradado oscuro + transparencia */
+    
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(30, 30, 30, 0.65));
-    backdrop-filter: blur(12px); /* 🔥 efecto vidrio */
-    -webkit-backdrop-filter: blur(12px); /* para Safari */
-
+    backdrop-filter: blur(5px);
     color: #fff;
     padding: 20px 35px;
     display: flex;
@@ -53,17 +99,14 @@ body {
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
-
-    /* Borde luminoso elegante */
+    
     border-top: 1px solid rgba(255, 255, 255, 0.12);
-
-    z-index: 100;
-}
-
+    
+    z-index: 100;}
 
 .footer-info h3 {
     margin: 0;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -74,7 +117,7 @@ body {
 
 .footer-redes {
     display: flex;
-    gap: 8px;
+    gap: 5px;
 }
 
 .icon {
@@ -84,58 +127,34 @@ body {
 
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.05); /* transparente */
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4px);
     transition: 0.3s ease;
 }
 
-.icon:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-3px);
-}
-
-
-.icon:hover {
-    background: #444;
-}
+.icon:hover { background: rgba(255, 255, 255, 0.15);transform: translateY(-3px);}
 
 /* Colores personalizados por red */
-.github { background: #24292e; }
-.github:hover { background: #3b4046; }
-
-.insta { background: #c13584; }
-.insta:hover { background: #e1306c; }
-
-.tiktok { background: #010101; border-color: #fe2c55; }
-.tiktok:hover { background: #fe2c55; }
-
-/* Hace que el contenido ocupe toda la pantalla */
-html, body {
-    height: 100%;
+.github {
+    background: #24292e;
 }
 
-/* Hace que el body empuje el footer hacia abajo */
-body {
-    display: flex;
-    flex-direction: column;
+.github:hover {
+    background: #3b4046;
 }
 
-/* Contenido principal ocupa el espacio */
-main {
-    flex: 1;
-    padding-bottom: 140px;
+.insta {
+    background: #c13584;
 }
 
-/* FOOTER */
-.footer {
-    width: 100%;
-    background: #000;
-    color: #fff;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    border-top: 1px solid #333;
+.insta:hover {
+    background: #e1306c;
 }
+
+.tiktok {
+    background: #010101;
+    border-color: #fe2c55;
+}
+
+.tiktok:hover {
+    background: #fe2c55;}
