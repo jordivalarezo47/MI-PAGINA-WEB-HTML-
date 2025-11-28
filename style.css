@@ -1,17 +1,19 @@
 /* ========== HEADER ========== */
 .header {
+    left: 0;
+    top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.85);
     /* Fondo negro con transparencia */
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     margin-bottom: 30px;
     position: relative;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .header-container {
@@ -40,8 +42,8 @@
 }
 
 .header-profile .profile-img {
-    width: 100px;  /* Ajustamos el tamaño de la imagen */
-    height: 100px;
+    width: 75px;  /* Ajustamos el tamaño de la imagen */
+    height: 75px;
     border-radius: 50%;  /* Hace que la imagen tenga forma circular */
     border: 2px solid #fff; /* Borde blanco alrededor de la imagen */
     object-fit: cover;  /* Asegura que la imagen se recorte de manera uniforme */
